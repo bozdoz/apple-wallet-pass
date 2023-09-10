@@ -40,13 +40,15 @@ openssl req -new -key signerKey.key -out request.certSigningRequest
 
 3. Fill in Apple's information:
 
-> Country Name (2-letter code) []: **US**
-> State or Province Name []: **United States**
-> Locality Name []:
-> Organization Name []: **Apple Inc.**
-> Organizational Unit Name []: **Apple Worldwide Developer Relations**
-> Common Name []: **Apple Worldwide Developer Relations Certification Authority**
-> Email Address []: **your-email**
+```console
+Country Name (2-letter code) []: US
+State or Province Name []: United States
+Locality Name []:
+Organization Name []: Apple Inc.
+Organizational Unit Name []: Apple Worldwide Developer Relations
+Common Name []: Apple Worldwide Developer Relations Certification Authority
+Email Address []: your-email
+```
 
 4. Create a Pass Type Identifier: https://developer.apple.com/account/resources/identifiers/list/passTypeId
 
