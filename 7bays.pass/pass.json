@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/walletpass/json-schemas/master/pass.schema.json",
+  "formatVersion" : 1,
+  "passTypeIdentifier" : "pass.com.bozdoz.seven-bays",
+  "teamIdentifier": "57C7S8SH64",
+  "organizationName": "bozdoz",
+  "description" : "bozdoz - Unofficial Seven Bays Membership",
+  "backgroundColor": "rgb(255,255,255)",
+  "foregroundColor": "rgb(23, 23, 23)",
+  "storeCard": {
+    "headerFields": [{
+      "label": "2004163",
+      "key": "header",
+      "value": ""
+    }],
+    "secondaryFields": [{
+      "label": "",
+      "key": "secondary",
+      "value": ""
+    }],
+    "auxiliaryFields": [{
+      "label": "",
+      "key": "aux",
+      "value": ""
+    }],
+    "backFields": [{
+      "label": "Member Id",
+      "key": "back",
+      "value": "2004163"
+    }]
+  },
+  "serialNumber": "2004163-PDF417",
+  "barcodes": [
+    {
+      "message": "2004163",
+      "format": "PKBarcodeFormatPDF417",
+      "messageEncoding": "iso-8859-1",
+      "altText": "2004163"
+    }
+  ]
+}
+
