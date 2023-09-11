@@ -9,33 +9,38 @@
   "foregroundColor": "rgb(23, 23, 23)",
   "storeCard": {
     "headerFields": [{
-      "label": "2004163",
+      "label": "{{BARCODE}}",
       "key": "header",
       "value": ""
     }],
+    "primaryFields": [{
+      "label": "{{PRIMARY_LABEL}}",
+      "key": "primary",
+      "value": "{{PRIMARY_VALUE}}"
+    }],
     "secondaryFields": [{
-      "label": "",
+      "label": "{{SECONDARY_LABEL}}",
       "key": "secondary",
-      "value": ""
+      "value": "{{SECONDARY_VALUE}}"
     }],
     "auxiliaryFields": [{
-      "label": "",
+      "label": "{{AUX_LABEL}}",
       "key": "aux",
-      "value": ""
+      "value": "{{AUX_VALUE}}"
     }],
     "backFields": [{
       "label": "Member Id",
       "key": "back",
-      "value": "2004163"
+      "value": "{{BARCODE}}"
     }]
   },
-  "serialNumber": "2004163-PDF417",
+  "serialNumber": "{{BARCODE}}",
   "barcodes": [
     {
-      "message": "2004163",
+      "message": "{{BARCODE}}",
       "format": "PKBarcodeFormatPDF417",
       "messageEncoding": "iso-8859-1",
-      "altText": "2004163"
+      "altText": "{{BARCODE}}"
     }
   ]
 }

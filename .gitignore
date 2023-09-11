@@ -1,6 +1,9 @@
 node_modules/
 certs/
 *.pkpass
+**/pass.json
 **/manifest.json
 **/signature
 .DS_Store
+
+.env
