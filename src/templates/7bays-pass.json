@@ -34,11 +34,29 @@
       "value": "{{BARCODE}}"
     }]
   },
+  "suppressStripShine": false,
+  "semantics": {
+    "wifiAccess": [{
+      "password": "ziggystardust",
+      "ssid": "7Bays_Guest"
+    }],
+    "silenceRequested": true
+  },
+  "maxDistance": 40,
+  "locations": [{
+    "latitude": 44.65815279507144,
+    "longitude": -63.58019831126137,
+    "relevantText": "Seven Bays Gottigen"
+  }, {
+    "latitude": 44.6469180495707,
+    "longitude": -63.66259576704075,
+    "relevantText": "Seven Bays Bayers Lake"
+  }],
   "serialNumber": "{{BARCODE}}",
   "barcodes": [
     {
       "message": "{{BARCODE}}",
-      "format": "PKBarcodeFormatPDF417",
+      "format": "PKBarcodeFormatQR",
       "messageEncoding": "iso-8859-1",
       "altText": "{{BARCODE}}"
     }
