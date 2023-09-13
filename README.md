@@ -4,15 +4,15 @@ Creating custom Apple Wallet Passes for various membership cards, for the low, l
 
 ### Image Info (From Apple Developer Portal)
 
-The background image (background.png) is displayed behind the entire front of the pass. The expected dimensions are **180 x 220 points**. The image is cropped slightly on all sides and blurred. Depending on the image, you can often provide an image at a smaller size and let it be scaled up.
+The background image (`background.png`) is displayed behind the entire front of the pass. The expected dimensions are **180 x 220 points**. The image is cropped slightly on all sides and blurred. Depending on the image, you can often provide an image at a smaller size and let it be scaled up.
 
-The footer image (footer.png) is displayed near the barcode. The allotted space is **286 x 15 points**.
+The footer image (`footer.png`) is displayed near the barcode. The allotted space is **286 x 15 points**.
 
-The icon (icon.png) is displayed when a pass is shown on the lock screen and by apps such as Mail when showing a pass attached to an email. The icon should measure **29 x 29 points**.
+The icon (`icon.png`) is displayed when a pass is shown on the lock screen and by apps such as Mail when showing a pass attached to an email. The icon should measure **29 x 29 points**.
 
-The logo image (logo.png) is displayed in the top left corner of the pass, next to the logo text. The allotted space is **160 x 50 points**; in most cases it should be narrower.
+The logo image (`logo.png`) is displayed in the top left corner of the pass, next to the logo text. The allotted space is **160 x 50 points**; in most cases it should be narrower.
 
-The strip image (strip.png) is displayed behind the primary fields. 
+The strip image (`strip.png`) is displayed behind the primary fields. 
 
 **Icon and logo are required**: https://github.com/tinovyatkin/pass-js/blob/84ddb92210a0243c5947a063d4e1d0654604d5ef/src/lib/images.ts#L66
 
@@ -73,6 +73,8 @@ These files are used in the `src/makeSignature.js` script:
 - `wwdr.pem`
 - `signerCert.pem`
 - `signerKey.key`
+
+**Note**: `wwdr.pem` never changes; you can use it for multiple pass types. `signerKey.key` doesn't need to change; you can just re-use your `request.certSigningRequest` to create new PassTypeId's and new signer keys.  These files I've moved to a `shared-certs` directory; see `.gitignore`, and `src/makeSignature.js`
 
 ### Run the scripts
 

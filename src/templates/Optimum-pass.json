@@ -1,0 +1,47 @@
+{
+  "$schema": "https://raw.githubusercontent.com/walletpass/json-schemas/master/pass.schema.json",
+  "formatVersion" : 1,
+  "passTypeIdentifier" : "pass.com.bozdoz.optimum",
+  "teamIdentifier": "57C7S8SH64",
+  "organizationName": "bozdoz",
+  "description" : "bozdoz - Unofficial PC Optimum Card",
+  "backgroundColor": "rgb(255,255,255)",
+  "foregroundColor": "rgb(23, 23, 23)",
+  "storeCard": {
+    "headerFields": [{
+      "label": "{{HEADER_LABEL}}",
+      "key": "header",
+      "value": "{{HEADER_VALUE}}"
+    }],
+    "primaryFields": [{
+      "label": "{{PRIMARY_LABEL}}",
+      "key": "primary",
+      "value": "{{PRIMARY_VALUE}}"
+    }],
+    "secondaryFields": [{
+      "label": "{{SECONDARY_LABEL}}",
+      "key": "secondary",
+      "value": "Load your offers weekly why don't you?"
+    }],
+    "auxiliaryFields": [{
+      "label": "{{AUX_LABEL}}",
+      "key": "aux",
+      "value": "{{AUX_VALUE}}"
+    }],
+    "backFields": [{
+      "label": "Who you gonna call?",
+      "key": "back",
+      "value": "Ghostbusters"
+    }]
+  },
+  "serialNumber": "{{BARCODE}}",
+  "barcodes": [
+    {
+      "message": "{{BARCODE}}",
+      "format": "PKBarcodeFormatPDF417",
+      "messageEncoding": "iso-8859-1",
+      "altText": "{{BARCODE}}"
+    }
+  ]
+}
+

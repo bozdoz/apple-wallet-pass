@@ -2,6 +2,8 @@ const { createHash } = require("crypto");
 const { promises: fs } = require("fs");
 const path = require("path");
 
+const ignoreFiles = ['manifest.json', 'signature', 'certs']
+
 /**
  * @param {Buffer} data
  */
@@ -47,11 +49,12 @@ const makeManifest = async (dir) => {
 
   await Promise.all(
     files.map(async (file) => {
-      // ignore manifest.json & signature
-      if (file === "manifest.json" || file === "signature") {
+      // ignore manifest.json & signature (& certs)
+      if (ignoreFiles.includes(file)) {
         return;
       }
-
+      
+      // TODO: we should eventually support dirs
       const hash = await getHashForFile(path.join(dirname, file));
 
       console.log({ [file]: hash });

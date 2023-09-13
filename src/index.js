@@ -1,6 +1,7 @@
 const makeManifest = require("./makeManifest");
 const makePass = require("./makePass");
 const makeSignature = require("./makeSignature");
+const makeZip = require("./makeZip");
 
 /** only supports --flag=value or --flag truthiness */
 const getFlags = () => process.argv.filter(arg => arg.startsWith('-')).reduce((obj, cur) => {
@@ -31,6 +32,9 @@ const main = async () => {
 
   await makeSignature(dir);
   console.log("Created signature");
+  
+  await makeZip(dir);
+  console.log("Created pkpass");
 };
 
 main().catch((e) => {

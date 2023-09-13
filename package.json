@@ -5,8 +5,7 @@
   "private": true,
   "main": "src/index.js",
   "scripts": {
-    "start": "node -r dotenv/config src/index.js",
-    "poststart": "zip -j -r 7bays.pkpass 7bays.pass/*"
+    "start": "node -r dotenv/config src/index.js"
   },
   "author": "@bozdoz",
   "license": "MIT",

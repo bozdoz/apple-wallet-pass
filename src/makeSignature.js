@@ -12,15 +12,19 @@ const getFile = async (absFile) => fs.readFile(absFile, { encoding: "utf-8" });
  */
 const makeSignature = async (dir) => {
   const dirname = path.join(__dirname, "..", dir);
-  const certs = path.join(__dirname, "..", "certs");
+  const certs = path.join(dir, "certs");
+  const sharedCerts = path.join(__dirname, "..", "shared-certs");
 
   const p7 = forge.pkcs7.createSignedData();
 
   const [manifest, cert, key, wwdr] = await Promise.all([
     getFile(path.join(dirname, "manifest.json")),
+    // signerCert is related to a unique pass type id
     getFile(path.join(certs, "signerCert.pem")),
-    getFile(path.join(certs, "signerKey.key")),
-    getFile(path.join(certs, "wwdr.pem")),
+    // signerKey could be shared
+    getFile(path.join(sharedCerts, "signerKey.key")),
+    // wwdr never changes, until it expires
+    getFile(path.join(sharedCerts, "wwdr.pem")),
   ]);
 
   p7.content = manifest;
